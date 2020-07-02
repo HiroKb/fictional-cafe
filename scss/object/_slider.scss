@@ -1,0 +1,28 @@
+.slider__item{
+}
+.slider__img{
+  position: relative;
+  width: 100%;
+  &:before{
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+
+    @include mq-high(lg){
+      padding-top: 41.5%;
+    }
+  }
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.slider__text{
+  margin-top: $space_m;
+  line-height: 1.2;
+  @include mq-high(){
+    font-size: $font-size_m;
+    text-align: center;
+  }
+}

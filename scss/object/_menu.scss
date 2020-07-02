@@ -1,0 +1,42 @@
+.menu{
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mq-high(){
+    height: 80vh;
+  }
+  @include mq-high(lg){
+    flex-direction: row;
+    height: 40vh;
+  }
+}
+.menu__panel{
+  height: 48%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  &--first{
+    @extend .menu__panel;
+    background-image: url("../images/cafe_time.jpg");
+  }
+  &--second{
+    @extend .menu__panel;
+    background-image: url("../images/bar_time.jpg");
+  }
+  @include mq-high(lg){
+    height: 100%;
+    width: 49%;
+  }
+}
+.menu__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: $font-size_xl;
+  font-family: $theme_font-family;
+  color: $theme-color_third;
+  text-shadow: 0 0 10px #000 ;
+}

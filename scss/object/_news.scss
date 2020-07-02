@@ -1,0 +1,37 @@
+.news{
+}
+.news__list{
+  width: 100%;
+  list-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 200px;
+  background-color: $theme-color_third;
+  padding: $space_ms;
+  border-radius: 8px;
+}
+.news__item{
+  padding-top: $space_ms;
+  padding-bottom: $space_ms;
+  &:not(:first-child){
+    border-top: 1px solid $theme-color;
+  }
+}
+.news__link{
+  display: flex;
+  align-items: center;
+}
+.news__date{
+  border: 1px solid $theme-color;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+}
+.news__text{
+  margin-left: $space_m;
+}
+.news__button{
+  margin-top: $space_m;
+  display: flex;
+  justify-content: center;
+}
+

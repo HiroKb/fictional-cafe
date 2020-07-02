@@ -1,0 +1,46 @@
+//変数定義
+$site-width: 980px;
+
+$font-size_default: 1.6rem;
+$font-size_s: 1.2rem;
+$font-size_m: 2rem;
+$font-size_l: 2.4rem;
+$font-size_xl: 3.2rem;
+$font-size_3l: 6.4rem;
+
+$space_s:4px;
+$space_ms:8px;
+$space_m:16px;
+$space_l:32px;
+$space_xl:64px;
+$space_3l:128px;
+
+$theme-color: #513626;
+$theme-color_second: #e2cdb7;
+$theme-color_third: #e2d6c8;
+
+$theme_font-family: 'Montserrat', sans-serif;
+
+// min-width
+$breakpoint-high: (
+        'md': 'screen and (min-width: 481px)',
+        'lg': 'screen and (min-width: 781px)',
+) !default;
+
+// max-width
+$breakpoint-low: (
+        'sm': 'screen and (max-width: 480px)',
+        'md': 'screen and (max-width: 780px)',
+) !default;
+
+@mixin mq-high($breakpoint: md) {
+  @media #{map-get($breakpoint-high, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-low($breakpoint: sm) {
+  @media #{map-get($breakpoint-low, $breakpoint)} {
+    @content;
+  }
+}

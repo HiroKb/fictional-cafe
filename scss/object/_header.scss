@@ -1,0 +1,42 @@
+.header{
+  position: fixed;
+  height: 60px;
+  padding-left: $space_m;
+  padding-right: $space_m;
+  width: 100%;
+  z-index: 1;
+  transition: background-color .5s ease-in;
+  @include mq-high(lg){
+    padding-left: $space_l;
+    padding-right: $space_l;
+  }
+  &.active{
+    transition: background-color .5s ease-out;
+    background-color: rgba(255, 255, 255, .8);
+  }
+}
+.header__inner{
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title{
+  font-size: 3.2rem;
+}
+.header__nav{
+  @include mq-low(md){
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    top: 0;
+    right: -100%;
+    background: rgba(255, 255, 255, .8);
+    transition: right .5s ease-in;
+    &.active{
+      right: 0;
+      transition: right .5s ease-out;
+    }
+  }
+}

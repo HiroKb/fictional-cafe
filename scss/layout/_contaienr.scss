@@ -1,0 +1,9 @@
+.l-container{
+  padding-left: $space_m;
+  padding-right: $space_m;
+  @include mq-high(lg){
+    max-width: 1002px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

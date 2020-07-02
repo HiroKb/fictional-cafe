@@ -1,0 +1,42 @@
+.hero{
+  height: 200vh;
+  width: 100vw;
+}
+.hero__inner{
+  position: fixed;
+  z-index: -1;
+}
+.hero__skew {
+  position: absolute;
+  top: 0;
+  right: -200vw;
+  transform: skewX(-20deg);
+  transform-origin: bottom left;
+  transition: 1.5s ease-in;
+  &.active{
+    transition: 1.5s ease-out;
+    right: 0;
+  }
+}
+.hero__skew-mask {
+  overflow: hidden;
+}
+.hero__img{
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &--first{
+    @extend .hero__img;
+    background-image: url("../images/hero_1.jpg");
+  }
+  &--second{
+    @extend .hero__img;
+    width: 200vw;
+    transform: skewX(20deg);
+    transform-origin: bottom left;
+    background-image: url("../images/hero_2.jpg");
+  }
+}
+

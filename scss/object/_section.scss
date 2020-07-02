@@ -1,0 +1,35 @@
+.section{
+  padding-top: $space_xl;
+  padding-bottom: $space_xl;
+  background-color: $theme-color_second;
+  &--different-color{
+    @extend .section;
+    background-color: $theme-color_third;
+    box-shadow: 0px 6px 8px -2px #51433a inset, 0px -6px 8px -2px #51433a inset;
+  }
+  @include mq-high(){
+    padding-top: $space_3l;
+    padding-bottom: $space_3l;
+  }
+}
+
+.section__title{
+  font-size: $font-size_3l;
+  font-family: $theme_font-family;
+  &--right{
+    @extend .section__title;
+    text-align: right;
+  }
+  &--left{
+    @extend .section__title;
+    text-align: left;
+  }
+}
+
+.section__content{
+  margin-top: $space_m;
+  @include mq-high(){
+    margin-top: $space_l;
+  }
+}
+

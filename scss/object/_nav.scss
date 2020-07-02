@@ -1,0 +1,31 @@
+.nav{
+  display: flex;
+  font-size: $font-size_l;
+  @include mq-low(md){
+    flex-direction: column;
+    align-items: center;
+    padding-top: $space_3l;
+  }
+  @include mq-low(){
+    padding-top: $space_xl;
+  }
+}
+.nav__item{
+  &:not(:first-child){
+    margin-left: $space_l;
+    @include mq-low(md){
+      margin-left: 0;
+    }
+  }
+}
+.nav__link{
+  font-family: $theme_font-family;
+  @include mq-low(md){
+    display: block;
+    font-size: $font-size_xl;
+    padding: $space_l;
+  }
+  @include mq-low(){
+    padding: $space_m;
+  }
+}

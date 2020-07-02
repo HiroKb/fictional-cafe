@@ -1,0 +1,38 @@
+.contact__text{
+  font-size: $font-size_l;
+}
+.contact__tel-num {
+  display: block;
+  font-size: $font-size_l;
+  margin-top: $space_s;
+}
+.contact__form-area{
+  margin-top: $space_l;
+}
+.contact__form{
+  margin-top: $space_s;
+}
+
+.contact__input{
+  display: block;
+  width: 100%;
+  padding: $space_s;
+  background-color: $theme-color_third;
+  border: none;
+  outline: none;
+  font-size: $font-size_l;
+  &--large{
+    @extend .contact__input;
+    margin-top: $space_m;
+  }
+}
+.contact__input + .contact__input{
+  margin-top: $space_m;
+}
+.contact__button{
+  margin-top: $space_m;
+  @include mq-high(){
+    display: flex;
+    justify-content: center;
+  }
+}

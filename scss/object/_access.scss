@@ -1,0 +1,51 @@
+.access{
+  @include mq-high(){
+    display: flex;
+  }
+}
+.access__map{
+  position: relative;
+  width: 100%;
+  @include mq-high(){
+    width: 60%;
+    order: 2;
+  }
+
+  @include mq-high(lg){
+    width: 50%;
+  }
+
+  &:before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+.access__map iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.access__details{
+  margin-top: $space_ms;
+  @include mq-high(){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 1;
+    width: 40%;
+    margin-top: 0;
+  }
+  @include mq-high(lg){
+    width: 50%;
+  }
+}
+.access__text{
+  font-size: $font-size_l;
+  &:not(:last-child){
+    margin-bottom: $space_ms;
+  }
+}
